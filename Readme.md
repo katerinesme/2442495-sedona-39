@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Екатерина Сметанкина](https://up.htmlacademy.ru/htmlcss/39/user/2442495).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena)
+*Сайт: [Проект Седона]( https://katerinesme.github.io/2442495-sedona-39/)
 
 ---
 
