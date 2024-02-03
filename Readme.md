@@ -2,7 +2,7 @@
 
 * Студент: [Екатерина Сметанкина](https://up.htmlacademy.ru/htmlcss/39/user/2442495).
 * Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena) <br>
-*Сайт: [Проект Седона]( https://katerinesme.github.io/2442495-sedona-39/)
+* Сайт: [Проект Седона]( https://katerinesme.github.io/2442495-sedona-39/)
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
