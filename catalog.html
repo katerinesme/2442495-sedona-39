@@ -9,7 +9,7 @@
   <body>
     <header class="page-header" data-test="header">
       <a class="navigation-logo" href="index.html">
-        <img class="page-header-logo" src="images/logotype.svg" width="140" height="70"  alt="Логотип сайта города Седона.Перейти на главную страницу">
+        <img class="page-header-logo" src="images/logotype.svg" width="138" height="64"  alt="Логотип сайта города Седона.Перейти на главную страницу">
       </a>
       <nav class="navigation">
         <ul class="navigation-list">
@@ -40,8 +40,9 @@
       </nav>
     </header>
     <main class="main-inner" data-test="main">
-      <section class="hotels-filter" data-test=" filter">
-        <h1> Гостиницы Седоны </h1>
+      <header class="inner-nav">
+        <h1 class="inner-title"> Гостиницы Седоны </h1>
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
         <ol class="breadcrumbs-list">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">
@@ -49,9 +50,12 @@
             </a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="catalog.html"> Гостиницы </a>
+            <a class="breadcrumbs-link" href="catalog.html" aria-current="location"> Гостиницы </a>
           </li>
         </ol>
+        </nav>
+      </header>
+        <section class="hotels-filter" data-test=" filter"></section>
         <h2 class="visually-hidden">Список фильтров</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
