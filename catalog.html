@@ -9,7 +9,7 @@
   <body>
     <header class="page-header" data-test="header">
       <a class="navigation-logo" href="index.html">
-        <img class="page-header-logo" src="#" alt="Логотип сайта города Седона">
+        <img class="page-header-logo" src="#" alt="Логотип сайта города Седона.Перейти на главную страницу">
       </a>
       <nav class="navigation">
         <ul class="navigation-list">
@@ -49,7 +49,7 @@
             </a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link"> Гостиницы </a>
+            <a class="breadcrumbs-link" href="catalog.html"> Гостиницы </a>
           </li>
         </ol>
         <h2 class="visually-hidden">Список фильтров</h2>
@@ -58,20 +58,20 @@
             <legend class="catalog-filter-title"> Инфраструктура </legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label class="controls">
-                  <input class="control-input" type="checkbox" name="pool" checked>
+                <label class="controls" for="pool">
+                  <input class="control-input" type="checkbox" name="pool" id="pool">
                   Бассейн
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="controls">
-                  <input class="control-input" type="checkbox" name="parking" checked>
+                <label class="controls" for="parking">
+                  <input class="control-input" type="checkbox" name="parking" id="parking" checked>
                   Парковка
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="controls">
-                  <input class="control-input" type="checkbox" name="Wi-Fi">
+                <label class="controls" for="Wi-Fi">
+                  <input class="control-input" type="checkbox" name="Wi-Fi" id="Wi-Fi">
                   Wi-Fi
                 </label>
               </li>
@@ -81,27 +81,36 @@
             <legend class="catalog-filter-title"> Тип Жилья</legend>
             <ul class="catalog-filter-group">
               <li class="catalog-filter-item">
-                <label class="controls">
-                  <input class="control-input" type="radio" name="type-of-accomodation" value="hotel" checked>
+                <label class="controls" for="hotel">
+                  <input class="control-input" type="radio" name="type-of-accomodation" value="hotel" id="hotel" checked>
                   Гостиница
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="controls">
-                  <input class="control-input" type="radio" name="type-of-accomodation" value="motel">
+                <label class="controls" for="motel">
+                  <input class="control-input" type="radio" name="type-of-accomodation" value="motel" id="motel">
                   Мотель
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="controls">
-                  <input class="control-input" type="radio" name="type-of-accomodation" value="apartments">
+                <label class="controls" for="apartments">
+                  <input class="control-input" type="radio" name="type-of-accomodation" value="apartments" id="apartments">
                   Апартаменты
                 </label>
               </li>
             </ul>
           </fieldset>
-            <button class="filter-button active-filter-button" type="submit"> Применить </button>
-            <button class="filter-button" type="submit"> Сбросить </button>
+          <fieldset>
+            <legend class="catalog-filter-title"> Стоимость, ₽: </legend>
+            <label class="control-price" for="start-price"> От
+              <input type="text" id="start-price" name="start-price" placeholder="0">
+            </label>
+            <label class="control-price" for="stop-price"> До
+              <input type="text" id="stop-price" name="stop-price" placeholder="9000">
+            </label>
+          </fieldset>
+          <button class="filter-button active-filter-button" type="submit"> Применить </button>
+          <button class="filter-button" type="submit"> Сбросить </button>
         </form>
       </section>
       <section class="catalog" data-test="catalog">
