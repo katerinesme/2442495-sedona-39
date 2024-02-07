@@ -212,3 +212,17 @@ input[type=text] {
   background-color: #F2F2F2;
 
 }
+
+/* footer*/
+
+.footer-social-list {
+  list-style: none;
+}
+
+.footer-contact {
+  font-size: 40px;
+  line-height: 40px;
+  color:#000000;
+  text-decoration: none;
+  text-align: center;
+}
