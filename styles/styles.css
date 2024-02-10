@@ -37,6 +37,14 @@ body {
   text-decoration: none;
   background-color: #756157;
   border-radius: 4px;
+  text-align: center;
+}
+
+.main-button {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: none;
 }
 
 
@@ -177,7 +185,7 @@ body {
 }
 
 .recommend-item:nth-child(2) {
-background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .recommend-title {
@@ -207,7 +215,7 @@ background-color: #ffffff;
 
 .search-button-link {
   padding: 8px 50px;
-  font-style: 20px;
+  font-size: 20px;
   line-height: 36px;
 }
 
@@ -229,7 +237,7 @@ background-color: #ffffff;
 }
 
 .subscribe-description {
-  font-style: 22px;
+  font-size: 22px;
   line-height: 26px;
 }
 
@@ -237,11 +245,7 @@ background-color: #ffffff;
   padding: 8px 50px;
   font-size: 20px;
   line-height: 36px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #FFFFFF;
   background-color: #82B3D3;
-  border: none;
 }
 
 input[type=text] {
@@ -282,15 +286,19 @@ input[type=text] {
 }
 
 .social-link-youtube {
-background-image: url(../images/youtube.svg);
-background-repeat: no-repeat;
-width: 22px;
-height: 17px;
+  background-image: url(../images/youtube.svg);
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 17px;
 }
 
 /* catalog*/
 
 /* hotels-filter*/
+
+.catalog-filter {
+  display: flex;
+}
 
 .hotels-filter {
   background-image: url(../images/catalog-background.jpg);
@@ -299,9 +307,9 @@ height: 17px;
 }
 
 .inner-title {
-font-size: 60px;
-line-height: 78px;
-color: #FFFFFF;
+  font-size: 60px;
+  line-height: 78px;
+  color: #FFFFFF;
 }
 
 .breadcrumbs-list {
@@ -356,14 +364,153 @@ input[type=number] {
   background-color: #F2F2F2;
 }
 
-.active-filter-button {
+.filter-button {
   padding: 8px 50px;
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
+  color: #FFFFFF;
   text-transform: uppercase;
+  background: transparent;
+  border: none;
+}
+
+
+.active-filter-button {
+  padding: 8px 50px;
+  font-size: 20px;
+  line-height: 20px;
   color: #FFFFFF;
   background-color: #82B3D3;
   border-radius: 4px;
+  align-self: center;
+}
+
+/* catalog */
+
+.catalog-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.catalog-select {
+  font-size: 18px;
+  line-height: 21px;
+  padding: 14px 20px;
+  padding-right: 131px;
+  border: 2px solid #E5E5E5;
+  background-color: #FFFFFF;
+}
+
+.catalog-mode {
+  display: block;
+  padding: 17px 16px;
+  border: 2px solid #E5E5E5;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 14px;
+}
+
+.card-mode {
+  background-image: url(../images/card-icon.svg)
+}
+
+.more-mode {
+  background-image: url(../images/icon-more.svg);
+}
+
+.list-mode {
+  background-image: url(../images/list-icon.svg);
+}
+
+.catalog-mode-active {
+  border: 2px solid #000000;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-title-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.catalog-card-title {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.card-description {
+  color: #333333;
+}
+
+.card-price {
+  color: #333333;
+}
+
+.more-button {
+  padding: 8px 26px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.favourite-card {
+  padding: 8px 26px;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #82B3D3;
+  border-radius: 4px;
+}
+
+.current-favourite {
+  padding: 8px 26px;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #7DB54F;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 700;
   border: none;
+}
+
+.card-rating {
+  padding-top: 9px;
+  padding-bottom: 8px;
+  padding-left: 23px;
+  padding-right: 22px;
+  color: #333333;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #F2F2F2;
+  text-transform: uppercase;
+  width: 95px;
+}
+
+.pagination {
+  display: flex;
+  gap: 8px;
+  list-style-type: none;
+}
+
+.pagination-link {
+  text-decoration: none;
+  color:#FFFFFF;
+}
+
+.pagination-item {
+  background-color: #82B3D3;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.subscribe-catalog {
+  text-align: center;
+}
+
+.subscribe-catalog .subscribe-description {
+  color:#333333;
 }

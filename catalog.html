@@ -32,7 +32,7 @@
             </a>
           </li>
           <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#">
+            <a class="navigation-user-link favourite-hotels" href="#">
               <span class="visually-hidden"> Избранные отели</span>
               <span class="likes-number"> 12 </span>
             </a>
@@ -114,7 +114,7 @@
             <input type="number" id="stop-price" name="stop-price" placeholder="9000">
           </label>
         </fieldset>
-        <button class="filter-button active-filter-button" type="submit"> Применить </button>
+        <button class="filter-button active-filter-button main-button" type="submit"> Применить </button>
         <button class="filter-button" type="reset"> Сбросить </button>
       </form>
       </section>
@@ -125,13 +125,13 @@
           <option value="popular"> Популярные </option>
           <option value="expensive"> Сначала дорогие </option>
         </select>
-        <a class="catalog-mode catalog-mode-active" href="#">
+        <a class="catalog-mode card-mode catalog-mode-active" href="#">
           <span class="visually-hidden"> Показать карточки </span>
         </a>
-        <a class="catalog-mode" href="#">
+        <a class="catalog-mode more-mode" href="#">
           <span class="visually-hidden"> Показать расширенные карточки </span>
         </a>
-        <a class="catalog-mode" href="#">
+        <a class="catalog-mode list-mode" href="#">
           <span class="visually-hidden"> Показать список </span>
         </a>
         <ul class="catalog-list">
@@ -145,7 +145,7 @@
             <p class="card-description"> Гостиница </p>
             <p class="card-price"> От 4000 ₽ </p>
             <a class="button-link more-button" href="#"> Подробнее </a>
-            <button class="favourite-card"> В избранное </button>
+            <button class="favourite-card main-button"> В избранное </button>
             <p class="stars four-stars">
               <span class="visually-hidden"> Отель 4 звезды </span>
             </p>
@@ -179,7 +179,7 @@
             <p class="card-description"> Гостиница </p>
             <p class="card-price"> От 2500 ₽ </p>
             <a class="button-link more-button" href="#"> Подробнее </a>
-            <button class="favourite-card"> В избранное </button>
+            <button class="favourite-card main-button"> В избранное </button>
             <p class="three-stars">
               <span class="visually-hidden"> Отель 3 звезды </span>
             </p>
@@ -196,7 +196,7 @@
             <p class="card-description"> Гостиница </p>
             <p class="card-price"> От 1500 ₽ </p>
             <a class="button-link more-button" href="#"> Подробнее </a>
-            <button class="favourite-card"> В избранное </button>
+            <button class="favourite-card main-button"> В избранное </button>
             <p class="two-stars">
               <span class="visually-hidden"> Отель 2 звезды </span>
             </p>
@@ -230,7 +230,7 @@
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="subscribe-email"> Ваш email </label>
           <input type="text" id="subscribe-email" name="user-email" placeholder="Ваш e-mail">
-          <button class="subscribe-button" type="submit"> Подписаться </button>
+          <button class="subscribe-button main-button" type="submit"> Подписаться </button>
         </form>
       </section>
     </main>
