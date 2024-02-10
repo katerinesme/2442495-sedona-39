@@ -99,6 +99,17 @@ body {
   height: 17px;
 }
 
+.likes-number {
+  color: #FFFFFF;
+  font-size: 10px;
+  line-height: 10px;
+  background-color: #7DB54F;
+  border-radius: 50%;
+  padding: 5px;
+  padding-left: 4px;
+}
+
+
 /* hero*/
 
 .hero {
