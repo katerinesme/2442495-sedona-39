@@ -150,7 +150,7 @@ body {
 
 .page-container {
   width: 1200px;
-  margin: 0 auto;;
+  margin: 0 auto;
 }
 
 /* hero*/
@@ -328,8 +328,17 @@ input[type=text] {
 
 /* footer*/
 
+.footer-container {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
 .social-list {
+  display: flex;
+  width: 142px;
   list-style: none;
+  margin-right: 235.5px;
 }
 
 .contact {
@@ -358,6 +367,11 @@ input[type=text] {
   background-repeat: no-repeat;
   width: 22px;
   height: 17px;
+}
+
+.author-logo {
+  width: 115px;
+  margin-left: auto;
 }
 
 /* catalog*/
@@ -494,12 +508,20 @@ input[type=number] {
   background-image: url(../images/list-icon.svg);
 }
 
+
 .catalog-mode-active {
   border: 2px solid #000000;
 }
 
 .catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   list-style: none;
+}
+
+.catalog-item {
+  width: 340px;
 }
 
 .catalog-title-link {
