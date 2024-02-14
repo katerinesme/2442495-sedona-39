@@ -27,7 +27,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #F2F2F2;
 }
 
 .main-container {
@@ -53,6 +53,7 @@ body {
 }
 
 .main-button {
+  font-family: inherit;
   font-weight: 700;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -64,6 +65,7 @@ body {
 
 .page-header {
   margin-bottom:0;
+  background-color: #FFFFFF;
 }
 
 .navigation {
@@ -151,15 +153,16 @@ body {
 .page-container {
   width: 1200px;
   margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 /* hero*/
 
 .hero {
   margin-top: 0;
-  background: bottom url(../images/collar-hero.svg),
+  background:  url(../images/collar-hero.svg) bottom/100% auto,
    url(../images/index-background.jpg);
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #a9cfe8;
 }
@@ -294,7 +297,7 @@ body {
   text-align: center;
   background-image: url(../images/subscribe-background.jpg);
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .subscribe-title {
@@ -327,6 +330,10 @@ input[type=text] {
 }
 
 /* footer*/
+
+.page-footer {
+  background-color: #FFFFFF;
+}
 
 .footer-container {
   display: flex;
@@ -384,7 +391,7 @@ input[type=text] {
 
 .inner-wrapper {
   background-image: url(../images/catalog-background.jpg);
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #82B3D3;
 }
@@ -557,6 +564,7 @@ input[type=number] {
 }
 
 .current-favourite {
+  font-family: inherit;
   padding: 8px 26px;
   font-size: 16px;
   line-height: 20px;
