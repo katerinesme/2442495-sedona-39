@@ -18,6 +18,13 @@ html {
   height: 100%;
 }
 
+.main-wrapper {
+  width: 1200px;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+}
+
 body {
   margin: 0;
   display: flex;
@@ -223,6 +230,7 @@ body {
 }
 
 .advantages-title {
+  margin-top: 102px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -235,8 +243,8 @@ body {
 }
 
 .advantages-item {
-  background-color: rgba(131, 179, 211, 0.12);
   width: 400px;
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantages-item-big {
@@ -263,11 +271,17 @@ body {
 /* повторяется с .advantages-lead - Объединить?*/
 
 .recommend-lead {
+  margin-top: 64px;
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+}
+
+.reasons {
+  margin-bottom: 64px;
 }
 
 .recommend-list {
@@ -319,6 +333,8 @@ body {
 }
 
 .search-title {
+  margin-top: 96px;
+  margin-bottom: 20px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -326,12 +342,15 @@ body {
 }
 
 .search-description {
+  margin-bottom: 54px;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
 }
 
 .search-button-link {
+  display: inline-block;
+  margin-bottom: 96px;
   padding: 8px 50px;
   font-size: 20px;
   line-height: 36px;
@@ -348,6 +367,8 @@ body {
 }
 
 .subscribe-title {
+  padding-top: 96px;
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -355,8 +376,15 @@ body {
 }
 
 .subscribe-description {
+  margin-bottom: 54px;
   font-size: 22px;
   line-height: 26px;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 104px;
 }
 
 .subscribe-button {
@@ -386,13 +414,15 @@ input[type=text] {
   display: flex;
   width: 1060px;
   margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 .social-list {
   display: flex;
   width: 142px;
   list-style: none;
-  margin-right: 235.5px;
+  margin-right: 235px;
 }
 
 .contact {
@@ -402,10 +432,14 @@ input[type=text] {
   text-decoration: none;
 }
 
+.social-link {
+  display: block;
+}
+
 .social-link-vk {
   mask-image: url(../images/vk.svg);
-  background-color: #83B3D3;
   mask-repeat: no-repeat;
+  background-color: #83B3D3;
   width: 24px;
   height: 14px;
 }
@@ -440,6 +474,7 @@ input[type=text] {
 }
 
 .inner-wrapper {
+  margin-top: 0;
   background-image: url(../images/catalog-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -447,6 +482,7 @@ input[type=text] {
 }
 
 .inner-title {
+  padding-top: 35px;
   font-size: 60px;
   line-height: 78px;
   color: #FFFFFF;
