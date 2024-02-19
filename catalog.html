@@ -12,7 +12,7 @@
       <header class="page-header" data-test="header">
         <nav class="navigation">
           <a class="navigation-logo" href="index.html">
-            <img class="page-header-logo" src="images/logotype.svg" width="138" height="64"
+            <img class="page-header-logo" src="images/logotype.svg" width="140" height="70"
               alt="Логотип сайта города Седона.Перейти на главную страницу">
           </a>
           <ul class="navigation-list">
@@ -126,21 +126,31 @@
             </section>
           </div>
           <section class="catalog" data-test="catalog">
-            <h2 class="catalog-title"> Найдено гостиниц: 38 </h2>
-            <select class="catalog-select">
-              <option value="cheapest"> Сначала дешевые </option>
-              <option value="popular"> Популярные </option>
-              <option value="expensive"> Сначала дорогие </option>
-            </select>
-            <a class="catalog-mode card-mode catalog-mode-active" href="#">
-              <span class="visually-hidden"> Показать карточки </span>
-            </a>
-            <a class="catalog-mode more-mode" href="#">
-              <span class="visually-hidden"> Показать расширенные карточки </span>
-            </a>
-            <a class="catalog-mode list-mode" href="#">
-              <span class="visually-hidden"> Показать список </span>
-            </a>
+            <div class="catalog-services">
+              <h2 class="catalog-title"> Найдено гостиниц: 38 </h2>
+              <select class="catalog-select">
+                <option value="cheapest"> Сначала дешевые </option>
+                <option value="popular"> Популярные </option>
+                <option value="expensive"> Сначала дорогие </option>
+              </select>
+              <ul class="catalog-mode-list">
+                <li class="catalog-mode-item">
+                  <a class="mode-link card-mode catalog-mode-active" href="#">
+                    <span class="visually-hidden"> Показать карточки </span>
+                  </a>
+                </li>
+                <li class="catalog-mode-item">
+                  <a class="mode-link more-mode" href="#">
+                    <span class="visually-hidden"> Показать расширенные карточки </span>
+                  </a>
+                </li>
+                <li class="catalog-mode-item">
+                  <a class="mode-link list-mode" href="#">
+                    <span class="visually-hidden"> Показать список </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
             <ul class="catalog-list">
               <li class="catalog-item">
                 <a class="catalog-photo-link" tabindex="-1" href="#">
@@ -224,19 +234,19 @@
                 <a class="pagination-link" href="#"> 4 </a>
               </li>
               <li class="pagination-item">
-                <span class="pagination-more"> ... </span>
+                <a class=" pagination-link pagination-more" href="#"> ... </a>
               </li>
               <li class="pagination-item">
                 <a class="pagination-link" href="#"> 10 </a>
               </li>
             </ul>
           </section>
-          <section class="subscribe-catalog" data-test="subscribe">
+          <section class="subscribe subscribe-catalog" data-test="subscribe">
             <h2 class="subscribe-title"> Подпишитесь на рассылку </h2>
             <p class="subscribe-description"> Только полезная информация и никакого спама, честное бойскаутское! </p>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="subscribe-email"> Ваш email </label>
-              <input type="text" id="subscribe-email" name="user-email" placeholder="Ваш e-mail">
+              <input type="text" id="subscribe-email" name="user-email" placeholder="Ваш email">
               <button class="subscribe-button main-button" type="submit"> Подписаться </button>
             </form>
           </section>
