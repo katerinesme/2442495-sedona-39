@@ -14,6 +14,10 @@
   font-display: swap;
 }
 
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
 html {
   height: 100vh;
 }
@@ -25,7 +29,7 @@ html {
   width: 1200px;
   margin: 0 auto;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-
+  background-color: #FFFFFF;
 }
 
 body {
@@ -79,20 +83,20 @@ body {
 /* header*/
 
 .page-header {
-  margin-bottom: -7px;
-  background-color: #FFFFFF;
+  z-index: 1;
 }
-
 .navigation {
   display: flex;
+  align-items: center;
   width: 1060px;
   margin: 0 auto;
 }
 
 .navigation-logo {
-  display: block;
+  align-self: flex-start;
   margin-right: 30px;
   width: 138px;
+  object-fit: contain;
 }
 
 .navigation-link {
@@ -124,6 +128,7 @@ body {
 
 .navigation-user {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -142,7 +147,8 @@ body {
 }
 
 .navigation-button-link {
-  width: 92px;
+  margin-left: 20px;
+  width: 160px;
   padding: 8px 34px;
   font-size: 16px;
   line-height: 20px;
@@ -156,7 +162,8 @@ body {
   height: 18px;
 }
 
-.favorite-hotels{
+.favorite-hotels {
+  position: relative;
   background-image: url("../images/like.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -165,13 +172,15 @@ body {
 }
 
 .likes-number {
+  position: absolute;
   color: #FFFFFF;
   font-size: 10px;
   line-height: 10px;
   background-color: #7DB54F;
   border-radius: 50%;
   padding: 5px;
-  padding-left: 4px;
+  left: 20px;
+  top: 10px;
 }
 
 /* main */
@@ -185,26 +194,26 @@ body {
 /* hero*/
 
 .hero {
-  margin-top: 0;
-  background:  url("../images/collar-hero.svg") bottom/100% auto,
-   url(../images/index-background.jpg);
-  background-size: cover;
+  padding-top: 51px;
+  padding-bottom: 82px;
+  background-image: url("../images/collar-hero.svg"),
+    url(../images/index-background.jpg);
   background-repeat: no-repeat;
+  background-position: left bottom, left top;
+  background-size: 100% auto, cover;
   background-color: #a9cfe8;
+  text-align: center;
 }
 
 .hero-image {
   display: block;
   margin: 0 auto;
-  padding-top: 51px;
-  padding-bottom: 82px;
 }
 
 /* advantages*/
 
 .advantages-container {
-  padding: 69px 275px;
-  text-align: center;
+  padding: 69px 290px;
 }
 
 .reasons {
@@ -222,6 +231,7 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .advantages-list {
@@ -247,12 +257,16 @@ body {
 }
 
 .advantages-item {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   width: 400px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantages-item-big {
   display: flex;
+  flex-direction: row;
   width: 1200px;
   color: #FFFFFF;
   background-color: #82B3D3;
@@ -274,8 +288,12 @@ body {
 
 /* повторяется с .advantages-lead - Объединить?*/
 
+.recommends-container {
+  padding: 69px 290px;
+}
+
 .recommend-lead {
-  margin-top: 64px;
+  margin-top: 0;
   margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
@@ -284,12 +302,9 @@ body {
   text-align: center;
 }
 
-.reasons {
-  margin-bottom: 64px;
-}
-
 .recommend-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -297,6 +312,11 @@ body {
 }
 
 .recommend-item {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 81px 85px;
+  width: 400px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -305,6 +325,7 @@ body {
 }
 
 .recommend-title {
+  margin-top: 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -312,20 +333,43 @@ body {
   text-transform: uppercase;
 }
 
+.recommend-description {
+ margin-top: 0;
+ margin-bottom: 0;
+}
+
 .recommend-title-house::before {
-  content: url("../images/house.svg");
+  content: "";
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+  background-image:  url("../images/house.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 75px;
   height: 72px;
 }
 
 .recommend-title-food::before {
-  content: url("../images/burger.svg");
+  content: "";
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+  background-image: url("../images/burger.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 75px;
   height: 72px;
 }
 
 .recommend-title-souvenir::before {
-  content: url("../images/present.svg");
+  content: "";
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+  background-image: url("../images/present.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 75px;
   height: 72px;
 }
@@ -406,10 +450,11 @@ body {
 }
 
 input[type=text] {
+  font-family: inherit;
   line-height: 24px;
   padding: 12px 20px;
-  width: 412px;
-  height: 28px;
+  width: 452px;
+  height: 52px;
   border: none;
   border-radius: 4px, 0, 0, 4px;
   background-color: #F2F2F2;
@@ -487,7 +532,7 @@ input[type=text] {
 }
 
 .inner-wrapper {
-  padding: 35px  70px 70px;
+  padding: 35px 70px 70px;
   background-image: url("../images/catalog-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -557,6 +602,7 @@ input[type=text] {
 }
 
 input[type=number] {
+  font-family: inherit;
   line-height: 24px;
   padding: 12px 20px;
   width: 103px;
@@ -606,6 +652,7 @@ input[type=number] {
 
 .catalog-select {
   font-family: inherit;
+  color: #333333;
   width: 292px;
   font-size: 18px;
   line-height: 21px;
@@ -625,14 +672,15 @@ input[type=number] {
 }
 
 .catalog-mode-item {
-  width: 16px;
+  width: 48px;
   padding: 17px 16px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
 }
 
 .catalog-mode-active {
-  border: 2px sold #000000; /* Заменить, поставить актив к айтем? */
+  border: 2px sold #000000;
+  /* Заменить, поставить актив к айтем? */
 }
 
 .mode-link {
@@ -723,16 +771,13 @@ input[type=number] {
 }
 
 .card-rating {
-  padding-top: 9px;
-  padding-bottom: 8px;
-  padding-left: 23px;
-  padding-right: 22px;
+  padding: 9px 23px;
+  width: 145px;
   color: #333333;
   font-size: 16px;
   line-height: 20px;
   background-color: #F2F2F2;
   text-transform: uppercase;
-  width: 95px;
 }
 
 .pagination {
