@@ -14,7 +14,9 @@
   font-display: swap;
 }
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -28,7 +30,7 @@ html {
   height: 100vh;
   width: 1200px;
   margin: 0 auto;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   background-color: #FFFFFF;
 }
 
@@ -82,9 +84,6 @@ body {
 
 /* header*/
 
-.page-header {
-  z-index: 1;
-}
 .navigation {
   display: flex;
   align-items: center;
@@ -244,7 +243,8 @@ body {
 }
 
 .advantages-title {
-  margin-top: 102px;
+  margin-top: 0;
+  margin-bottom: 64px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -253,20 +253,29 @@ body {
 }
 
 .advantages-description {
-  color: #333333;
+  color: inherit;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.advantages-item {
+.advantages-item,
+.advantages-wrap {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  padding: 113px 85px;
   width: 400px;
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-wrap {
+  padding: 102px 85px;
 }
 
 .advantages-item-big {
   display: flex;
   flex-direction: row;
+  padding: 0;
   width: 1200px;
   color: #FFFFFF;
   background-color: #82B3D3;
@@ -276,12 +285,14 @@ body {
   flex-direction: row-reverse;
 }
 
-.advantages-description {
-  color: inherit;
+.advantages-item:nth-child(3n):not(.advantages-item-big) {
+  background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-item:nth-child(3) {
-  background-color: rgba(131, 179, 211, 0.2);
+.advantages-img {
+  display: block;
+  object-fit: contain;
+  margin: auto;
 }
 
 /* recommends */
@@ -320,7 +331,7 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.recommend-item:nth-child(2) {
+.recommend-item:nth-child(2n) {
   background-color: #ffffff;
 }
 
@@ -334,8 +345,8 @@ body {
 }
 
 .recommend-description {
- margin-top: 0;
- margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .recommend-title-house::before {
@@ -343,7 +354,7 @@ body {
   display: block;
   margin: auto;
   margin-bottom: 30px;
-  background-image:  url("../images/house.svg");
+  background-image: url("../images/house.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 75px;
@@ -478,8 +489,12 @@ input[type=text] {
 
 .social-list {
   display: flex;
-  width: 142px;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 180px;
   list-style: none;
+  margin: 0;
+  padding: 0;
   margin-right: 235px;
 }
 
@@ -492,30 +507,30 @@ input[type=text] {
 
 .social-link {
   display: block;
+  box-sizing: border-box;
+  width: 48px;
+  padding: 13px 12px;
 }
 
 .social-link-vk {
   mask-image: url("../images/vk.svg");
   mask-repeat: no-repeat;
+  mask-position: center;
   background-color: #83B3D3;
-  width: 24px;
-  height: 14px;
 }
 
 .social-link-tg {
   mask-image: url("../images/tg.svg");
   mask-repeat: no-repeat;
+  mask-position: center;
   background-color: #83B3D3;
-  width: 18px;
-  height: 16px;
 }
 
 .social-link-youtube {
   mask-image: url("../images/youtube.svg");
   mask-repeat: no-repeat;
+  mask-position: center;
   background-color: #83B3D3;
-  width: 22px;
-  height: 17px;
 }
 
 .author-logo {
@@ -527,12 +542,9 @@ input[type=text] {
 
 /* hotels-filter*/
 
-.catalog-filter {
-  display: flex;
-}
-
 .inner-wrapper {
-  padding: 35px 70px 70px;
+  padding: 35px 70px;
+  padding-bottom: 70px;
   background-image: url("../images/catalog-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -551,6 +563,7 @@ input[type=text] {
   display: flex;
   align-items: center;
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
   list-style: none;
 }
@@ -574,11 +587,39 @@ input[type=text] {
   text-decoration: none;
 }
 
+.catalog-filter {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .catalog-filter-group {
+  display: flex;
+  flex-direction: column;
+  width: 151px;
   border: none;
+  margin: 0;
+  margin-right: 70px;
+  padding: 0;
+  word-break: keep-all;
+}
+
+.catalog-filter-group:nth-child(2) {
+  margin-right: 141px;
+  width: 141px;
+}
+
+.catalog-filter-price {
+  width: 288px;
+  margin-right: 70px;
+}
+
+.price-field {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .catalog-filter-title {
+  margin-bottom: 32px;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -612,9 +653,19 @@ input[type=number] {
   background-color: #F2F2F2;
 }
 
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  align-self: flex-end;
+  width: 191px;
+}
+
 .filter-button {
+  box-sizing: border-box;
   padding: 8px 50px;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   font-weight: 700;
   color: #FFFFFF;
@@ -625,13 +676,8 @@ input[type=number] {
 
 
 .active-filter-button {
-  padding: 8px 50px;
-  font-size: 20px;
-  line-height: 20px;
-  color: #FFFFFF;
   background-color: #82B3D3;
   border-radius: 4px;
-  align-self: center;
 }
 
 /* catalog */
@@ -710,30 +756,47 @@ input[type=number] {
 } */
 
 .catalog {
-  padding: 50px 60px 70px;
+  padding: 50px 70px;
+  padding-bottom: 60px;
 }
 
 .catalog-list {
-  display: flex;
-  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   padding: 0;
-  flex-wrap: wrap;
+  margin: 0;
   gap: 20px;
   list-style: none;
 }
 
 .catalog-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
   width: 340px;
+  box-shadow: 0 0 0 1px #E6E6E6;
 }
 
 .catalog-title-link {
+  display: block;
   text-decoration: none;
   color: #000000;
 }
 
 .catalog-card-title {
+  margin-top: 16px;
+  margin-bottom: 16px;
   font-size: 24px;
   line-height: 28px;
+}
+
+.card-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: auto auto auto;
+  column-gap: 20px;
+  row-gap: 16px;
+  align-items: center;
 }
 
 .card-description {
@@ -741,6 +804,7 @@ input[type=number] {
 }
 
 .card-price {
+  justify-self: end;
   color: #333333;
 }
 
@@ -751,7 +815,9 @@ input[type=number] {
 }
 
 .favourite-card {
-  padding: 8px 26px;
+  box-sizing: border-box;
+  font-family: inherit;
+  padding: 8px 18px;
   font-size: 16px;
   line-height: 20px;
   background-color: #82B3D3;
@@ -759,8 +825,10 @@ input[type=number] {
 }
 
 .current-favourite {
+  box-sizing: border-box;
+  width: 140px;
   font-family: inherit;
-  padding: 8px 26px;
+  padding: 8px 18pxpx;
   font-size: 16px;
   line-height: 20px;
   background-color: #7DB54F;
@@ -768,9 +836,12 @@ input[type=number] {
   text-transform: uppercase;
   font-weight: 700;
   border: none;
+  text-align: center;
 }
 
 .card-rating {
+  align-self: end;
+  margin: 0;
   padding: 9px 23px;
   width: 145px;
   color: #333333;
@@ -794,9 +865,7 @@ input[type=number] {
 
 .pagination-link {
   display: block;
-  box-sizing: border-box;
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
   padding: 12px 24px;
   text-decoration: none;
   color: #FFFFFF;
