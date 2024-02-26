@@ -84,6 +84,11 @@ body {
 
 /* header*/
 
+.page-header {
+  margin-bottom: -6px;
+  z-index: 1;
+}
+
 .navigation {
   display: flex;
   align-items: center;
@@ -112,7 +117,7 @@ body {
 .navigation-link-current {
   text-decoration: underline solid #756257;
   text-decoration-thickness: 2px;
-  text-underline-offset: 21px;
+  text-underline-offset: 19px;
 }
 
 .navigation-list {
@@ -183,12 +188,6 @@ body {
 }
 
 /* main */
-/*
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
-  background-color: #FFFFFF;
-}
 
 /* hero*/
 
@@ -198,7 +197,7 @@ body {
   background-image: url("../images/collar-hero.svg"),
     url(../images/index-background.jpg);
   background-repeat: no-repeat;
-  background-position: left bottom, left top;
+  background-position: bottom, left top;
   background-size: 100% auto, cover;
   background-color: #a9cfe8;
   text-align: center;
