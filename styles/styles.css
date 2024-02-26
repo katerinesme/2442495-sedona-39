@@ -99,6 +99,7 @@ body {
 .navigation-logo {
   align-self: flex-start;
   margin-right: 30px;
+  margin-bottom: -6px;
   width: 138px;
   object-fit: contain;
 }
@@ -243,7 +244,7 @@ body {
 
 .advantages-title {
   margin-top: 0;
-  margin-bottom: 64px;
+  margin-bottom: 62px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -655,6 +656,7 @@ input[type=number] {
 .filter-buttons {
   display: flex;
   flex-direction: column;
+  gap: 40px;
   justify-content: center;
   margin-left: auto;
   align-self: flex-end;
@@ -790,24 +792,31 @@ input[type=number] {
 }
 
 .card-wrap {
-  display: grid;
-  grid-template-columns: repeat(2, 140px);
-  grid-template-rows: auto auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   column-gap: 20px;
   row-gap: 16px;
-  align-items: center;
 }
 
 .card-description {
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 140px;
   color: #333333;
 }
 
 .card-price {
-  justify-self: end;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 140px;
+  text-align: right;
   color: #333333;
 }
 
 .more-button {
+  width: 140px;
   padding: 8px 26px;
   font-size: 16px;
   line-height: 20px;
@@ -815,6 +824,7 @@ input[type=number] {
 
 .favourite-card {
   box-sizing: border-box;
+  width: 140px;
   font-family: inherit;
   padding: 8px 18px;
   font-size: 16px;
@@ -839,15 +849,16 @@ input[type=number] {
 }
 
 .card-rating {
-  align-self: end;
   margin: 0;
-  padding: 9px 23px;
-  width: 145px;
+  padding: 8px 22px;
+  width: 140px;
   color: #333333;
   font-size: 16px;
   line-height: 20px;
   background-color: #F2F2F2;
   text-transform: uppercase;
+  border-radius: 4px;
+  text-align: center;
 }
 
 .pagination {
