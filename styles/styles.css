@@ -27,7 +27,7 @@ html {
 .main-wrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   width: 1200px;
   margin: 0 auto;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
@@ -84,24 +84,22 @@ body {
 
 /* header*/
 
-.page-header {
-  margin-bottom: -6px;
-  z-index: 1;
-}
-
 .navigation {
   display: flex;
   align-items: center;
   width: 1060px;
   margin: 0 auto;
+  position: relative;
 }
 
 .navigation-logo {
-  align-self: flex-start;
+  display: block;
   margin-right: 30px;
   margin-bottom: -6px;
-  width: 138px;
+  width: 140px;
+  height: 70px;
   object-fit: contain;
+  z-index: 1;
 }
 
 .navigation-link {
@@ -118,14 +116,14 @@ body {
 .navigation-link-current {
   text-decoration: underline solid #756257;
   text-decoration-thickness: 2px;
-  text-underline-offset: 19px;
+  text-underline-offset: 18px;
+  text-underline-position: under;
 }
 
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  width: 339px;
+  max-width: 339px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -245,6 +243,7 @@ body {
 .advantages-title {
   margin-top: 0;
   margin-bottom: 62px;
+  width: 175px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -254,7 +253,7 @@ body {
 
 .advantages-description {
   color: inherit;
-  margin-top: 0;
+  margin-top: auto;
   margin-bottom: 0;
 }
 
@@ -262,6 +261,7 @@ body {
 .advantages-wrap {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-grow: 1;
   padding: 113px 85px;
   width: 400px;
@@ -458,16 +458,18 @@ body {
   font-size: 20px;
   line-height: 36px;
   background-color: #82B3D3;
+  border-radius: 0 4px 4px 0;
 }
 
 input[type=text] {
   font-family: inherit;
+  font-size: 18px;
   line-height: 24px;
   padding: 12px 20px;
   width: 452px;
   height: 52px;
   border: none;
-  border-radius: 4px, 0, 0, 4px;
+  border-radius: 4px 0 0 4px;
   background-color: #F2F2F2;
 }
 
@@ -561,7 +563,9 @@ input[type=text] {
 
 .breadcrumbs-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 10px;
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
@@ -569,16 +573,27 @@ input[type=text] {
 }
 
 .breadcrumbs-item {
-  margin-right: 28px;
+  display: flex;
+}
+
+.breadcrumbs-item:not(:first-child)::before {
+  content: "";
+  display: block;
+  background-image: url("../images/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-right: 10px;
+  width: 8px;
+  height: 20px;
 }
 
 .home-page {
-  mask-image: url("../images/home.svg");
-  mask-repeat: no-repeat;
-  mask-position: center;
-  background-color: #FFFFFF;
-  width: 12px;
-  height: 12px;
+  background-image: url("../images/home.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 13px;
+  height: 15px;
 }
 
 .breadcrumbs-link {
@@ -656,11 +671,11 @@ input[type=number] {
 .filter-buttons {
   display: flex;
   flex-direction: column;
+  width: 191px;
   gap: 40px;
   justify-content: center;
   margin-left: auto;
   align-self: flex-end;
-  width: 191px;
 }
 
 .filter-button {
@@ -776,6 +791,7 @@ input[type=number] {
   padding: 20px;
   width: 340px;
   box-shadow: 0 0 0 1px #E6E6E6;
+  border-radius: 4px;
 }
 
 .catalog-title-link {
@@ -822,7 +838,7 @@ input[type=number] {
   line-height: 20px;
 }
 
-.favourite-card {
+.favorite-card {
   box-sizing: border-box;
   width: 140px;
   font-family: inherit;
@@ -833,11 +849,11 @@ input[type=number] {
   border-radius: 4px;
 }
 
-.current-favourite {
+.current-favorite {
   box-sizing: border-box;
   width: 140px;
   font-family: inherit;
-  padding: 8px 18pxpx;
+  padding: 8px 18px;
   font-size: 16px;
   line-height: 20px;
   background-color: #7DB54F;
@@ -859,6 +875,12 @@ input[type=number] {
   text-transform: uppercase;
   border-radius: 4px;
   text-align: center;
+}
+
+.stars {
+  display: block;
+  background-image: url("../images/stars.svg");
+  background-repeat: repeat-x;
 }
 
 .pagination {
