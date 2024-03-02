@@ -77,7 +77,6 @@ body {
 .button-link:hover,
 .button-link:focus {
  background-color: #615048;
- outline: none;
 }
 
 
@@ -98,7 +97,6 @@ body {
 .main-button:hover,
 .main-button:focus-visible {
   background-color: #68A2CA;
-  outline: none;
 }
 
 .main-button:active {
@@ -126,9 +124,13 @@ body {
   z-index: 1;
 }
 
-.navigation-logo:focus-visible {
-  border: 3px solid #82B3D3;
- outline: none;
+.navigation-logo:hover,
+.navigation-logo:focus {
+  opacity: 0.8;
+}
+
+.navigation-logo:active {
+  opacity: 0.3;
 }
 
 .navigation-link {
@@ -145,7 +147,6 @@ body {
 
 .navigation-link:hover,
 .navigation-link:focus-visible {
-  outline: none;
   color: #756157;
 }
 
@@ -192,13 +193,13 @@ body {
   text-decoration: none;
 }
 
-.navigation-user-link:focus-visible {
-  border: 2px solid #83B3D3;
-  outline: none;
+.navigation-user-link:hover,
+.navigation-user-link:focus {
+  opacity: 0.5;
 }
 
-.navigation-user-link:hover {
-  background-color: #E5E5E5;
+.navigation-user-link:active {
+  opacity: 0.3;
 }
 
 .navigation-button-link {
@@ -584,7 +585,10 @@ input[type=text]:hover {
 .contact:hover,
 .contact:focus {
   color: #756157;
-  outline: none;
+}
+
+.social-item {
+  position: relative;
 }
 
 .contact:active {
@@ -595,56 +599,63 @@ input[type=text]:hover {
   display: block;
   box-sizing: border-box;
   width: 48px;
-  padding: 13px 12px;
+  min-height: 40px;
 }
 
-.social-link-vk {
+.social-link::before {
+  position: absolute;
+  top:0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #83B3D3;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+.social-link-vk::before {
   mask-image: url("../images/vk.svg");
-  mask-repeat: no-repeat;
-  mask-position: center;
-  background-color: #83B3D3;
 }
 
-.social-link-tg {
+.social-link-tg::before {
   mask-image: url("../images/tg.svg");
-  mask-repeat: no-repeat;
-  mask-position: center;
-  background-color: #83B3D3;
 }
 
-.social-link-youtube {
+.social-link-youtube::before {
   mask-image: url("../images/youtube.svg");
-  mask-repeat: no-repeat;
-  mask-position: center;
-  background-color: #83B3D3;
 }
 
-.social-link:hover,
-.social-link:focus-visible {
-  background:  #68A2CA;
-  outline: none;
+.social-link:hover::before {
+  background-color:  #68A2CA;
 }
 
-.social-link:active {
+.social-link:active::before {
   background-color:   rgba(104, 162, 202, 0.3);
 }
 
 .author-logo {
-  mask-image: url("../images/logo-html.svg");
-  background-color: #000000;
-  mask-repeat: no-repeat;
-  mask-position: center;
   width: 115px;
   margin-left: auto;
 }
 
-.author-logo:hover,
-.author-logo:focus-visible {
-  background-color: #756157;
-  outline: none;
+.author-logo::before {
+  content: "";
+  display: block;
+  mask-image: url("../images/logo-html.svg");
+  background-color: #000000;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  width: 100%;
+  height: 100%;
 }
 
-.author-logo:active {
+.author-logo:hover::before,
+.author-logo:focus-visible::before {
+  background-color: #756157;
+}
+
+.author-logo:active::before {
   background-color: rgba(117, 97, 87, 0.3);
 }
 
@@ -926,6 +937,10 @@ input[type=number] {
   list-style: none;
 }
 
+.catalog-photo-link:hover {
+  opacity: 0.8;
+}
+
 .catalog-item {
   display: flex;
   flex-direction: column;
@@ -939,6 +954,15 @@ input[type=number] {
   display: block;
   text-decoration: none;
   color: #000000;
+}
+
+.catalog-title-link:hover,
+.catalog-title-link:focus {
+  color:  #756157;
+}
+
+.catalog-title-link:active {
+ color: rgba(117, 97, 87, 0.3);
 }
 
 .catalog-card-title {
@@ -1003,7 +1027,6 @@ input[type=number] {
 .current-favorite:hover,
 .current-favorite:focus {
   background-color: #6C9E42;
-  outline: none;
 }
 
 .current-favorite:active {
@@ -1025,9 +1048,8 @@ input[type=number] {
 }
 
 .stars {
-  display: block;
   background-image: url("../images/stars.svg");
-  background-repeat: repeat-x;
+  background-repeat: repeat;
 }
 
 .pagination {
@@ -1059,6 +1081,9 @@ input[type=number] {
   outline: none;
 }
 
+.pagination-link:focus:not(.pagination-link-current):not(.pagination-more) {
+  opacity: 0.3;
+}
 
 .pagination-item {
   background-color: #82B3D3;
