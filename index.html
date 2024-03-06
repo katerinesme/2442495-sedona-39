@@ -124,13 +124,12 @@
           <p class="subscribe-description"> Только полезная информация и никакого спама, честное бойскаутское! </p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe-email"> Ваш email </label>
-            <input type="text" id="subscribe-email" name="user-email" placeholder="Ваш email">
+            <input  class="subscribe-field" type="text" id="subscribe-email" name="user-email" placeholder="Ваш email">
             <button class="subscribe-button main-button" type="submit"> Подписаться </button>
           </form>
         </section>
       </main>
       <footer class="page-footer" data-test="footer">
-        <div class="footer-container">
           <ul class="social-list">
             <li class="social-item">
               <a class="social-link social-link-vk" href="https://vk.com/htmlacademy">
@@ -152,8 +151,42 @@
           <a class="author-logo" href="https://htmlacademy.ru/">
             <span class="visually-hidden"> Логотип компании разработчика сайта </span>
           </a>
-        </div>
       </footer>
+      <div class="modal-container modal-container-close">
+        <div class="modal modal-search">
+          <button class="modal-close-button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <section class="modal-content">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="get">
+              <div class="search-container">
+              <label for="checkin"> Дата Заезда </label>
+              <input class="search-form" type="text" name="checkin-date" id="checkin" placeholder="27 апреля 2020">
+              <p class="search-clue search-clue-warning"> Мы не можем отправить вас в прошлое. </p>
+              </div>
+              <div class="search-container">
+              <label for="checkout"> Дата Выезда </label>
+              <input class="search-form" type="text" name="checkout-date" id="checkout" placeholder="1 сентября 2023">
+              <p class="search-clue"> На эти даты есть свободные номера. Пока есть. </p>
+              </div>
+              <div class="people-count-container">
+              <label for="adult-count"> Взрослые:
+              <button class="button-count button-minus" aria-label="Уменьшить количество взрослых"></button>
+              <input class="people-count" type="text" id="adult-count" name="adult" placeholder="2">
+              <button class="button-count button-plus" aria-label="Увеличить количество взрослых"></button>
+            </label>
+            <label for="child-count"> Взрослые:
+              <button class="button-count button-minus" aria-label="Уменьшить количество детей"></button>
+              <input class="people-count" type="text" id="child-count" name="child" placeholder="2">
+              <button class="button-count button-plus" aria-label="Увеличить количество детей"></button>
+            </label>
+              </div>
+            <button class="main-button button-search-form" type="submit"> Найти </button>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 
