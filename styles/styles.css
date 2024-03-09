@@ -542,8 +542,8 @@ body {
   background-color: #F2F2F2;
 }
 
-input[type=text]:focus-visible,
-input[type=text]:hover {
+.subscribe-field:focus-visible,
+.subscribe-field:hover {
   box-shadow: inset 0 0 0 3px #68A2CA;
   outline: none;
 }
@@ -666,6 +666,8 @@ input[type=text]:hover {
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+  z-index: 2;
+  overflow-y: auto;
 }
 
 .modal {
@@ -697,6 +699,20 @@ input[type=text]:hover {
   cursor: pointer;
 }
 
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus-visible {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+  background-color: #cfcfcf;
+  opacity: 0.3;
+}
+
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
@@ -712,6 +728,7 @@ input[type=text]:hover {
 }
 
 .search-form {
+  position: relative;
   width: 440px;
   margin-left: auto;
   padding: 12px 20px;
@@ -719,18 +736,39 @@ input[type=text]:hover {
   border-radius: 4px;
   background-color: #F2F2F2;
   font-weight: 700;
-  color: #000000;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
+  background-image: url("../images/modal-calendar.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
 }
 
+.search-form:hover {
+  background-color: #E6E6E6;
+}
+
+.search-form:focus-visible {
+  background-color: #E6E6E6;
+  border: 3px solid #83B3D3;
+  outline: none;
+}
+
+
+.search-form::placeholder {
+  color: #000000;
+}
 
 .search-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 24px;
+}
+
+.search-container label {
+  max-width: 120px;
 }
 
 .search-clue {
@@ -745,25 +783,196 @@ input[type=text]:hover {
   color:  #FF5757;
 }
 
+/* количество взрослых и детей */
+
 .people-count-container {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 88px;
+  row-gap: 20px;
+  justify-content: space-between;
   margin-bottom: 48px;
+  align-items: center;
 }
 
-.people-count {
+.count-wrap {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 242px;
+  max-width: 278px;
+}
+
+
+.counter-input-wrapper {
+  display: flex;
+  align-items: center;
+  min-width: 110px;
+}
+
+.count-wrap label {
+  margin-right: auto;
+  word-wrap: keep-all;
+}
+
+.people-count-input {
   padding: 14px 10px;
   background-color: #F2F2F2;
   font-weight: 700;
-  color: #000000;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
   border: none;
-  min-width: 31px;
-  max-width: 60px;
+  width: 31px;
+  height: 48px;
 }
+
+.people-count-input::placeholder {
+  text-align: center;
+  color: #000000;
+}
+
+.people-count-input:hover {
+  background-color: #E6E6E6;
+}
+
+.people-count-input:focus-visible {
+  background-color: #E6E6E6;
+  box-shadow: inset 0 0 0 2px #83B3D3;
+  outline: none;
+}
+
+.button-count {
+  position: relative;
+  width: 40px;
+  height: 48px;
+  background-color:#F2F2F2;
+  border: none;
+}
+
+.button-count:hover {
+  background-color: #E6E6E6;
+}
+
+.button-count:focus-visible {
+  background-color: #E6E6E6;
+  border: 3px solid #83B3D3;
+  outline: none;
+}
+
+.button-count:active {
+  opacity: 0.5;
+}
+
+.button-minus {
+  border-radius: 4px 0 0 4px;
+}
+
+.button-plus {
+  border-radius: 0 4px 4px 0;
+}
+
+.button-minus::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(117, 97, 87, 0.3);
+  width: 14px;
+  height: 2px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+}
+
+.button-plus::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/plus.svg");
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+}
+
+.button-search-form {
+  margin-top: auto;
+  width: 100%;
+  padding: 18px 256px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #ffffff;
+  background-color: #83B3D3;
+  border: none;
+}
+
+.form-label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+}
+
+.tooltip {
+  width: 26px;
+  height: 26px;
+}
+
+
+.tooltip-toggle {
+  background-image: url("../images/tooltip.svg");
+  width: 26px;
+  height: 26px;
+  border: none;
+  background-color: transparent;
+}
+
+.tooltip-text {
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  background-color: #333333;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 16px;
+  padding-top: 15px;
+  padding-right: 18px;
+  padding-bottom: 18px;
+  padding-left: 22px;
+  width: 256px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-40%);
+  z-index: 1;
+  display: none;
+}
+
+.tooltip-text:after {
+  content:'';
+  background-image: url("../images/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position:absolute;
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+/*
+.form-label-icon {
+  position: relative;
+  padding-right: 26px;
+} */
 
 /* catalog*/
 
@@ -839,6 +1048,7 @@ input[type=text]:hover {
 .catalog-filter {
   display: flex;
   flex-wrap: wrap;
+  gap: 70px;
 }
 
 .catalog-filter-group {
@@ -848,20 +1058,18 @@ input[type=text]:hover {
   max-width: 170px;
   border: none;
   margin: 0;
-  margin-right: 70px;
   padding: 0;
   word-break: keep-all;
 }
 
 .catalog-filter-group:nth-child(2) {
-  margin-right: 140px;
+  margin-right: auto;
 }
 
 /* price filters */
 
 .catalog-filter-price {
   max-width: 288px;
-  margin-right: 70px;
 }
 
 .price-field {
@@ -1001,7 +1209,7 @@ input[type=text]:hover {
 }
 
 .range-bar {
-  position: absolute;
+  position: relative;
   height: 4px;
   background-color: #FFFFFF;
 }
@@ -1025,12 +1233,14 @@ input[type=text]:hover {
 }
 
 .toggle-min {
-  top: -8px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
 }
 
 .toggle-max {
-  top: -8px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 0;
 }
 
@@ -1041,7 +1251,6 @@ input[type=text]:hover {
   width: 191px;
   gap: 32px;
   justify-content: flex-end;
-  margin-left: auto;
 }
 
 .filter-button {
@@ -1296,8 +1505,8 @@ input[type=text]:hover {
 }
 
 .stars {
-  background-image: url("../images/stars.svg");
-  background-repeat: space;
+  background-image: url("../images/star.svg");
+  background-repeat: repeat-x;
   width: 18px;
   height: 17px;
 }
