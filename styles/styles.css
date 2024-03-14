@@ -722,6 +722,10 @@ img {
   overflow-y: auto;
 }
 
+.modal-container-close {
+  display: none;
+}
+
 .modal {
   position: relative;
   margin: auto;
@@ -1304,8 +1308,8 @@ img {
   cursor: pointer;
 }
 
-.range-toggle:hover {
-  outline: 3px solid #83B3D3;
+.range-toggle:active {
+  outline: 2px solid #83B3D3;
 }
 
 .range-toggle:disabled {
