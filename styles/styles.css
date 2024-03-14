@@ -122,7 +122,7 @@ img {
 
 .navigation {
   display: flex;
-  column-gap: 29px;
+  column-gap: 28px;
   align-items: center;
   justify-content: space-between;
   width: 1060px;
@@ -276,7 +276,7 @@ img {
 /* advantages*/
 
 .advantages-container {
-  padding: 69px 274px;
+  padding: 69px 265px;
   padding-bottom: 90px;
 }
 
@@ -432,6 +432,7 @@ img {
 .recommend-description {
   margin-top: 0;
   margin-bottom: 0;
+  color: #333333;
 }
 
 .recommend-title-house::before {
@@ -642,7 +643,7 @@ img {
 .social-link::before {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 2px;
   content: "";
   width: 100%;
   height: 100%;
@@ -1137,6 +1138,7 @@ img {
 
 .catalog-filter-price {
   max-width: 288px;
+  min-height: 160px;
 }
 
 .price-field {
@@ -1182,6 +1184,7 @@ img {
 
 .control-mark {
   position: absolute;
+  top: 1px;
   left: 0;
   width: 20px;
   height: 20px;
@@ -1396,6 +1399,7 @@ img {
   font-family: inherit;
   color: #333333;
   width: 292px;
+  min-height: 49px;
   font-size: 18px;
   line-height: 21px;
   padding: 10px 18px;
