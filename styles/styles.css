@@ -69,6 +69,7 @@ img {
 
 .button-link {
   display: block;
+  padding: 8px 15px;
   font-weight: 700;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -84,7 +85,6 @@ img {
   background-color: #615048;
 }
 
-
 .button-link:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #756157;
@@ -95,6 +95,7 @@ img {
 }
 
 .main-button {
+  padding: 8px 15px;
   font-family: inherit;
   font-weight: 700;
   text-transform: uppercase;
@@ -122,11 +123,11 @@ img {
 
 .navigation {
   display: flex;
+  margin: 0 auto;
   column-gap: 28px;
   align-items: center;
   justify-content: space-between;
   width: 1060px;
-  margin: 0 auto;
   position: relative;
 }
 
@@ -222,7 +223,6 @@ img {
   margin-left: 20px;
   width: 160px;
   min-height: 36px;
-  padding: 8px 34px;
   font-size: 16px;
   line-height: 20px;
 }
@@ -377,7 +377,6 @@ img {
 
 .advantages-img {
   display: block;
-  object-fit: contain;
   margin: auto;
 }
 
@@ -432,7 +431,7 @@ img {
 .recommend-description {
   margin-top: 0;
   margin-bottom: 0;
-  color: #333333;
+  color: #333333
 }
 
 .recommend-title-house::before {
@@ -499,7 +498,6 @@ img {
   margin: 0;
   margin-right: auto;
   margin-left: auto;
-  padding: 8px 50px;
   width: 376px;
   max-width: 500px;
   font-size: 20px;
@@ -520,7 +518,7 @@ img {
 .subscribe-main {
   color: #FFFFFF;
   background-image: url("../images/subscribe-background.jpg");
-  background-color: #3d5b6f;
+  background-color: #3D5B6F;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -550,7 +548,7 @@ img {
 }
 
 .subscribe-button {
-  padding: 8px 50px;
+  width: 232px;
   font-size: 20px;
   line-height: 36px;
   background-color: #82B3D3;
@@ -765,7 +763,7 @@ img {
 }
 
 .modal-close-button:active {
-  background-color: #cfcfcf;
+  background-color: #CFCFCF;
   opacity: 0.3;
 }
 
@@ -1305,7 +1303,7 @@ img {
   position: absolute;
   width: 20px;
   height: 20px;
-  background: #ffffff;
+  background-color: #FFFFFF;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -1569,7 +1567,6 @@ img {
 .more-button {
   width: 140px;
   min-height: 36px;
-  padding: 8px 26px;
   font-size: 16px;
   line-height: 20px;
 }
@@ -1577,9 +1574,7 @@ img {
 .favorite-card {
   box-sizing: border-box;
   width: 140px;
-  min-height: 36px;
   font-family: inherit;
-  padding: 8px 18px;
   font-size: 16px;
   line-height: 20px;
   background-color: #82B3D3;
@@ -1609,7 +1604,7 @@ img {
 
 .card-rating {
   margin: 0;
-  padding: 8px 22px;
+  padding: 8px 15px;
   min-height: 37px;
   width: 140px;
   color: #333333;
@@ -1660,26 +1655,12 @@ img {
 
 .pagination-link {
   display: block;
-  text-align: center;
-  min-width: 60px;
   padding: 12px 18px;
-  text-decoration: none;
-  color: #FFFFFF;
-}
-
-.pagination-link:hover:not(.pagination-link-current):not(.pagination-more),
-.pagination-link:focus:not(.pagination-link-current):not(.pagination-more) {
-  background-color: #68A2CA;
-  border-radius: 4px;
-}
-
-.pagination-link:active:not(.pagination-link-current):not(.pagination-more) {
-  opacity: 0.3;
-}
-
-.pagination-item {
   background-color: #82B3D3;
   border-radius: 4px;
+  text-align: center;
+  min-width: 60px;
+  text-decoration: none;
   color: #FFFFFF;
 }
 
@@ -1687,11 +1668,28 @@ img {
   color: #000000;
   background-color: #F2F2F2;
   border-radius: 4px;
+  pointer-events: none;
 }
 
 .pagination-more {
   color: #000000;
   background-color: #FFFFFF;
+}
+
+.pagination-link:hover,
+.pagination-link:focus-visible {
+  background-color: #68A2CA;
+  border-radius: 4px;
+}
+
+.pagination-link:active {
+  opacity: 0.8;
+}
+
+.pagination-more:hover,
+.pagination-more:focus-visible,
+.pagination-more:active {
+  background-color: #F2F2F2;
 }
 
 .subscribe-catalog .subscribe-description {
